@@ -1,0 +1,44 @@
+{
+  "name": "aws-manager",
+  "version": "1.0.0",
+  "description": "aws instance status check",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts",
+    "pm2": "pm2 start ts-node -- --project ./tsconfig.json index.ts",
+    "pm2-watch": "pm2 start ts-node -- --project ./tsconfig.json index.ts --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-auto-scaling": "^3.50.0",
+    "@aws-sdk/client-ec2": "^3.50.0",
+    "@aws-sdk/client-elastic-load-balancing-v2": "^3.51.0",
+    "@aws-sdk/client-s3": "^3.50.0",
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.1.1",
+    "@types/koa": "^2.13.4",
+    "@types/koa__router": "^8.0.11",
+    "@types/tail": "^2.2.1",
+    "aws-sdk": "^2.1071.0",
+    "dotenv": "^16.0.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.1.1",
+    "koa-send": "^5.0.1",
+    "koa-static": "^5.0.0",
+    "node-ssh": "^12.0.3",
+    "socket.io": "^4.4.1",
+    "tail": "^2.2.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/koa__cors": "^3.1.1",
+    "@types/koa-bodyparser": "^4.3.5",
+    "@types/koa-static": "^4.0.2",
+    "tsconfig-paths": "^3.12.0"
+  }
+}
